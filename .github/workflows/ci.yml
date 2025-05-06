@@ -24,15 +24,15 @@ jobs:
       - name: Install Dependencies
         run: |
           cd frontend && npm install
-          cd ../api && npm install
+          cd ../app && npm install
 
       - name: Run Tests
         run: |
           cd frontend && npm test
-          cd ../api && npm test
+          cd ../app && npm test
 
       - name: Lint Code
         run: |
           cd frontend && npm run lint
-          cd ../api && npm run lint
+          cd ../app && npm run lint
 
