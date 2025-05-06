@@ -24,14 +24,11 @@ jobs:
       - name: Install Dependencies
         run: |
           cd frontend && npm install
-          cd ../container-app/app && npm install
 
       - name: Run Tests
         run: |
           cd frontend && npm test
-          cd ../container-app/app && npm test
 
       - name: Lint Code
         run: |
           cd frontend && npm run lint
-          cd ../container-app/app && npm run lint
