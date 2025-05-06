@@ -2,7 +2,7 @@
   "name": "react-frontend",
   "version": "1.0.0",
   "scripts": {
-    "start": "react-scripts start --host 0.0.0.0 --openssl-legacy-provider"
+    "start": "react-scripts start --host 0.0.0.0 --openssl-legacy-provider",
     "test": "react-scripts test"
   },
   "dependencies": {
