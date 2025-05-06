@@ -1,0 +1,27 @@
+provider "aws" {
+  region = "us-east-1"
+}
+
+resource "aws_ecs_cluster" "app_cluster" {
+  name = "app-cluster"
+}
+
+resource "aws_ecs_task_definition" "app" {
+  family                   = "app"
+  network_mode             = "awsvpc"
+  requires_compatibilities = ["FARGATE"]
+  cpu                      = "256"
+  memory                   = "512"
+
+  container_definitions = jsonencode([{
+    name  = "api",
+    image = "your-dockerhub-username/node-api",  # ← Push your images to Docker Hub
+    portMappings = [{ containerPort = 3000 }]
+  }, {
+    name  = "frontend",
+    image = "your-dockerhub-username/react-frontend",
+    portMappings = [{ containerPort = 3000 }]
+  }])
+}
+
+# Add more resources (ALB, security groups, etc.) as needed
