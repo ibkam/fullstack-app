@@ -313,31 +313,3 @@ docker stats
 
 MIT License - See [LICENSE](./LICENSE) for details.
 ```
-
----
-
-### Pushing to GitHub
-
-To add this project to GitHub and include your CI/CD workflows:
-
-1. Initialize the Git repository:
-
-   ```bash
-   git init
-   git add .
-   git commit -m "Initial commit: Full-stack project with CI/CD integration"
-   ```
-
-2. Create a new repository on GitHub and add it as a remote:
-
-   ```bash
-   git remote add origin https://github.com/your-username/fullstack-app.git
-   git branch -M main
-   git push -u origin main
-   ```
-
-GitHub Actions will automatically trigger the CI and CD pipelines on any push to the `main` branch.
-
----
-
-This comprehensive README now explains the project's architecture, deployment process, and includes detailed steps for automating CI/CD workflows with GitHub Actions. Let me know if you want to dive deeper into any specific area or need further customizations for your deployment!
